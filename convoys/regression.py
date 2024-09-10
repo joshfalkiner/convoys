@@ -344,7 +344,7 @@ class GeneralizedGamma(RegressionModel):
             T = numpy.zeros((n_curves, n_samples))
         else:
             assert T.shape == (n_curves, n_samples)
-        B = numpy.zeros((n_curves, n_samples), dtype=numpy.bool)
+        B = numpy.zeros((n_curves, n_samples), dtype=bool)
         C = numpy.zeros((n_curves, n_samples))
         params = self.params['samples']
         for i, j in enumerate(numpy.random.randint(len(params['k']),

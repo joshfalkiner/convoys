@@ -344,7 +344,7 @@ def test_convert_dataframe_created_at_nan(n=1000):
     df.loc[df.index[0], 'created'] = None
     unit, groups, (G, B, T) = convoys.utils.get_arrays(df)
     assert numpy.issubdtype(G.dtype, numpy.integer)
-    assert numpy.issubdtype(B.dtype, numpy.bool_)
+    assert numpy.issubdtype(B.dtype, bool)
     assert numpy.issubdtype(T.dtype, numpy.number)
 
 
